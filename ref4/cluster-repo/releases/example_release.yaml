@@ -13,5 +13,5 @@ spec:
   values:
     image:
       repository: tomwells/example
-      tag: v1.0.15
+      tag: v1.0.14
     replicaCount: 1

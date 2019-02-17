@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "example.fullname" . }}
+  labels:
+    app: {{ include "example.name" . }}
+    chart: {{ include "example.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  selector:
+    app: {{ include "example.name" . }}
+    release: {{ .Release.Name }}
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000

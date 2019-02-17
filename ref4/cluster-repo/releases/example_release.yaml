@@ -1,0 +1,17 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: example
+  namespace: devops
+  annotations:
+    flux.weave.works/automated: 'true'
+    flux.weave.works/locked_user: Tom Wells <tom@synthesis.co.za>
+    flux.weave.works/locked: 'true'
+spec:
+  chartGitPath: example
+  values:
+    image:
+      repository: tomwells/example
+      tag: v1.0.15
+    replicaCount: 1

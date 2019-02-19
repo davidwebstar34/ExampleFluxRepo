@@ -4,7 +4,7 @@
 
 replicaCount: 1
 
-host: auto.synthesis.rocks
+host: frodo.synthesis.rocks
 
 image:
   repository: tomwells/example
